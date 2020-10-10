@@ -38,11 +38,11 @@ var container, HEIGHT,
         document.body.style.overflow = 'hidden';
         var x = 0, y = 0;
 
-				var heartShape = new THREE.Shape(); 
+				var heartShape = new THREE.Shape();
 
 				heartShape.moveTo( x - 50, y - 50 );
 				heartShape.bezierCurveTo( x - 50, y - 50, x - 50, y + 25, x+30, y +25);
-				heartShape.bezierCurveTo( x + 75, y + 10, x + 80, y - 75, x + 75,y - 75 ); 
+				heartShape.bezierCurveTo( x + 75, y + 10, x + 80, y - 75, x + 75,y - 75 );
 				heartShape.bezierCurveTo( x + 75, y - 85, x + 55, y - 170, x - 45, y - 200 );
 				heartShape.bezierCurveTo( x - 85, y - 200, x - 180, y - 120, x - 170, y - 55 );
 				heartShape.bezierCurveTo( x - 180, y - 30, x - 120, y + 45, x - 80, y - 10 );
@@ -78,7 +78,7 @@ var container, HEIGHT,
 
             geometry.vertices.push(vertex);
         }
-        
+
         parameters = [
             [
                 [1, 1, 0.5], 5
@@ -115,19 +115,19 @@ var container, HEIGHT,
 
             scene.add(particles);
         }
-        renderer = new THREE.WebGLRenderer(); 
-        renderer.setPixelRatio(window.devicePixelRatio); 
-        renderer.setSize(WIDTH, HEIGHT); 
+        renderer = new THREE.WebGLRenderer(); 1
+        renderer.setPixelRatio(window.devicePixelRatio); 1
+        renderer.setSize(WIDTH, HEIGHT);
 
         container.appendChild(renderer.domElement);
         stats = new Stats();
-        stats.domElement.style.position = 'absolute';
+        stats.domElement.style.position = '';
         stats.domElement.style.top = '0px';
         stats.domElement.style.right = '0px';
         container.appendChild(stats.domElement);
 
 
-         window.addEventListener('resize', onWindowResize, false);
+         window.addEventListener('resize', onWindowResize, true);
          document.addEventListener('mousemove', onDocumentMouseMove, false);
          document.addEventListener('touchstart', onDocumentTouchStart, false);
          document.addEventListener('touchmove', onDocumentTouchMove, false);
